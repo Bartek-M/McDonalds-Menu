@@ -8,10 +8,7 @@ html, body {
 
 * {
     margin: 0;
-}
-
-img:hover {
-    filter: brightness(1.1)
+    font-weight: bolder;
 }
 
 a {
@@ -33,6 +30,10 @@ nav {
     gap: 1rem;
 }
 
+.navbar-social:hover {
+    filter: brightness(1.1)
+}
+
 .nav-back {
     position: absolute;
     top: 100%;
@@ -42,6 +43,7 @@ nav {
     padding: 0.5em 3em 0.5em 1em;
     border-radius: 0 0 150px 0;
     font-size: 12px;
+    font-weight: normal;
     max-width: max-content;
     z-index: 10;
 }
@@ -61,35 +63,37 @@ nav {
     margin-right: 0.5rem;
 }
 
+/* CATEGORIES */
 .title-header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background: no-repeat center/100% url("./assets/images/bg.jpg");
     background-size: cover;
     color: white;
     position: relative;
-    height: 200px;
+    height: 300px;
 }
 
 .title-header h1 {
-    margin: 3rem 2rem 4rem;
+    margin: auto 0;
 }
 
 .categories-wrapper {
     display: flex;
-    position: absolute;
-    top: 85%;
     overflow: auto hidden;
     width: 100%;
+}
+
+.categories-wrapper::-webkit-scrollbar {
+    display: none;
 }
 
 .categories {
     display: flex;
     gap: 0.5rem;
     background-color: white;
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 2rem 2rem 0 0;
     padding: 1rem 2rem;
     flex-grow: 1;
 }
@@ -101,10 +105,53 @@ nav {
     border-radius: 200px;
     padding: 0.5rem 1.25rem;
     font-size: 0.75rem;
-    font-weight: 600;
     white-space: nowrap;
 }
 
 .categories a.active {
     background-color: white;
+}
+
+/* PRODUCTS */
+.category-title {
+    margin: 1rem 4rem;
+}
+
+.items-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-right: 1px solid #e7e7e7;
+    max-width: calc(100% / 6 - 1px);
+}
+
+.item div {
+    padding: 1rem 1.5rem;
+}
+
+@media (max-width: 2000px) {
+    .item {
+        max-width: calc(25% - 1px);
+    }
+}
+
+@media (max-width: 775px) {
+    .item {
+        max-width: calc(50% - 1px);
+    }
+}
+
+@media (max-width: 450px) {
+    .item {
+        max-width: calc(100% - 1px);
+    }
+}
+
+.item:hover {
+    background-color: var(--yellow);
 }
