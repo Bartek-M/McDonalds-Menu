@@ -186,12 +186,18 @@ footer * {
     justify-content: center;
     gap: 3rem;
     padding-bottom: 0.5rem;
+    max-height: 120px;
 }
 
 .footer-main div {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-main .main-links, .footer-main .secondary-links {
+    width: 340px;;
 }
 
 .footer-social {
@@ -212,4 +218,28 @@ footer * {
 
 .footer-rights.small {
     font-size: 0.7em
+}
+
+@media (max-width: 1100px) {
+    .footer-main {
+        flex-direction: column;
+        gap: 2rem;
+        max-height: unset;
+    }
+
+    .footer-main .main-links {
+        display: none;
+    }
+
+    .footer-main div {
+        flex-direction: row;
+    }
+
+    .footer-main .secondary-links {
+        width: 100%;
+    }
+
+    .footer-social {
+        margin-left: 0;
+    }
 }
