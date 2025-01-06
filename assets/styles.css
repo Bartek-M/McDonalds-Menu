@@ -23,7 +23,10 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1.5rem;
-    position: relative;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 10;
 }
 
 .navbar-social {
@@ -41,12 +44,11 @@ nav {
     left: 0;
     background-color: white;
     color: black;
-    padding: 0.5em 3em 0.5em 1em;
+    padding: 0.5em 3em 1em 1em;
     border-radius: 0 0 150px 0;
     font-size: 12px;
     font-weight: normal;
     max-width: max-content;
-    z-index: 10;
 }
 
 .nav-back:hover {
@@ -72,7 +74,6 @@ nav {
     background: no-repeat center/100% url("/assets/images/bg.jpg");
     background-size: cover;
     color: white;
-    position: relative;
     height: 300px;
 }
 
@@ -111,6 +112,18 @@ nav {
 
 .categories a.active {
     background-color: white;
+}
+
+.categories-wrapper.sticky {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding-top: 32px;
+    border-radius: 0 0 2rem 2rem;
+    background-color: white;
+    z-index: 9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* PRODUCTS */
