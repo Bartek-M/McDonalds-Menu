@@ -5,7 +5,6 @@
 
 html, body {
     font-family: Arial, Helvetica, sans-serif;
-    scroll-behavior: smooth;
 }
 
 * {
@@ -49,7 +48,7 @@ nav {
     left: 0;
     background-color: white;
     color: black;
-    padding: 0.5em 3em 1em 1em;
+    padding: 0.5rem 3rem 1rem 1rem;
     border-radius: 0 0 150px 0;
     font-size: 12px;
     font-weight: normal;
@@ -80,6 +79,7 @@ nav {
     background-size: cover;
     color: white;
     height: 300px;
+    position: relative;
 }
 
 .title-header h1 {
@@ -90,6 +90,9 @@ nav {
     display: flex;
     overflow: auto hidden;
     width: 100%;
+    position: absolute;
+    top: calc(100% - 2rem);
+    z-index: 100;
 }
 
 .categories-wrapper::-webkit-scrollbar {
@@ -127,7 +130,6 @@ nav {
     left: 0;
     padding-top: 32px;
     z-index: 9;
-    
 }
 
 .categories-wrapper.sticky .categories {
@@ -136,7 +138,8 @@ nav {
 
 .nav-back.sticky {
     right: 0;
-    min-width: 100%;
+    min-width: calc(100% - 4rem);
+    border-radius: 0;
 }
 
 /* PRODUCTS */
